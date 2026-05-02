@@ -1,0 +1,36 @@
+# ─── Secretos y configuración local ─────────────────────────────────────────
+# CRÍTICO: el archivo .env contiene tus API keys → jamás debe subirse a GitHub
+.env
+
+# ─── Bases de datos vectoriales generadas por Chroma ─────────────────────────
+# Se generan automáticamente al ejecutar el notebook, no tienen que versionarse
+vs_licitacion_*/
+chroma*/
+
+# ─── Entornos virtuales de Python ─────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ─── Cachés y archivos compilados de Python ───────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ─── Jupyter Notebook: checkpoints y metadatos temporales ────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ─── Archivos del sistema operativo ──────────────────────────────────────────
+.DS_Store           # macOS
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# ─── IDEs y editores ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
