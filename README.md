@@ -5,7 +5,7 @@ Sistema RAG  que permite consultar documentos de licitaciones públicas chilenas
 ---
 
 ## Estructura del repositorio
-
+```
 AsistenteLicitaciones/
 │
 ├── AsistenteLicitaciones.ipynb              # Notebook principal del proyecto
@@ -14,6 +14,8 @@ AsistenteLicitaciones/
 ├── .env.example                             # Plantilla de credenciales (copiar a .env)
 ├── .gitignore                               # Archivos excluidos de Git
 └── README.md                                # Este archivo
+```
+
 
 ---
 
