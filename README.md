@@ -1,12 +1,11 @@
 # 🏛️ Asistente de Cumplimiento Normativo para Licitaciones Públicas
 
-Sistema RAG (Retrieval-Augmented Generation) que permite consultar documentos de licitaciones públicas chilenas en lenguaje natural. El asistente responde únicamente basándose en los documentos cargados, evitando alucinaciones.
+Sistema RAG  que permite consultar documentos de licitaciones públicas chilenas en lenguaje natural. El asistente responde únicamente basándose en los documentos cargados, evitando alucinaciones.
 
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
-```
 AsistenteLicitaciones/
 │
 ├── AsistenteLicitaciones.ipynb              # Notebook principal del proyecto
@@ -15,11 +14,10 @@ AsistenteLicitaciones/
 ├── .env.example                             # Plantilla de credenciales (copiar a .env)
 ├── .gitignore                               # Archivos excluidos de Git
 └── README.md                                # Este archivo
-```
 
 ---
 
-## 📋 Descripción del proyecto
+## Descripción del proyecto
 
 El sistema carga los documentos `.docx` de una licitación, los fragmenta, los vectoriza con embeddings y los almacena en una base vectorial local (ChromaDB). Ante cada consulta, recupera los fragmentos más relevantes y se los entrega a GPT-4o para generar una respuesta fundamentada exclusivamente en los documentos.
 
@@ -29,7 +27,7 @@ El sistema carga los documentos `.docx` de una licitación, los fragmenta, los v
 
 ---
 
-## 🚀 Instrucciones de ejecución
+## Instrucciones de ejecución
 
 ### Opción A — Google Colab (recomendado)
 
@@ -40,21 +38,21 @@ El sistema carga los documentos `.docx` de una licitación, los fragmenta, los v
    - `GITHUB_BASE_URL` → `https://models.inference.ai.azure.com`
 4. Ejecuta las celdas en orden con `Shift + Enter`
 
-> **¿Cómo obtener el token de GitHub?**
-> Ve a https://github.com/settings/tokens → *Generate new token (classic)* → activa el scope `models:read` → copia el valor generado.
+**¿Cómo obtener el token de GitHub?**
+Ve a https://github.com/settings/tokens → *Generate new token (classic)* → activa el scope `models:read` → copia el valor generado.
 
 ---
 
 ### Opción B — VSCode / entorno local
 
 **1. Clonar el repositorio**
-```bash
+
 git clone https://github.com/Dani-txt/AsistenteLicitaciones.git
 cd AsistenteLicitaciones
-```
+
 
 **2. Crear un entorno virtual**
-```bash
+
 # Crear
 python -m venv venv
 
@@ -63,31 +61,31 @@ source venv/bin/activate
 
 # Activar en Windows
 venv\Scripts\activate
-```
+
 
 **3. Instalar dependencias**
-```bash
+
 pip install langchain langchain-community langchain-openai chromadb pypdf docx2txt python-dotenv
-```
+
 
 **4. Configurar credenciales**
 
 Copia la plantilla y completa con tus valores:
-```bash
+
 cp .env.example .env
-```
+
 
 Abre `.env` y reemplaza el token de ejemplo:
-```
+
 GITHUB_TOKEN=ghp_TU_TOKEN_AQUI
 GITHUB_BASE_URL=https://models.inference.ai.azure.com
-```
+
 
 > ⚠️ El archivo `.env` nunca se sube a GitHub — ya está protegido por `.gitignore`.
 
 **5. Ejecutar el notebook**
-```bash
+
 jupyter notebook AsistenteLicitaciones.ipynb
-```
+
 
 Ejecuta las celdas en orden con `Shift + Enter`.
