@@ -10,7 +10,8 @@ AsistenteLicitaciones/
 │
 ├── AsistenteLicitaciones.ipynb              # Notebook principal del proyecto
 ├── 1-RESOLUCION_EXENTA_00017_COMPRIMIDO.docx  # Bases de la licitación
-├── 2-ANEXO__WORD.docx                       # Plantilla de anexos para oferentes
+├── 2-ANEXO__WORD.docx                       # Plantilla de anexos para oferentes (sin datos)
+├── 5-ANEXO__LICITACION.docx                 # Anexo con datos de oferente
 ├── .env.example                             # Plantilla de credenciales (copiar a .env)
 ├── .gitignore                               # Archivos excluidos de Git
 └── README.md                                # Este archivo
@@ -26,6 +27,7 @@ El sistema carga los documentos `.docx` de una licitación, los fragmenta, los v
 **Documentos incluidos:**
 - `1-RESOLUCION_EXENTA_00017_COMPRIMIDO.docx` — Bases y resolución de la licitación
 - `2-ANEXO__WORD.docx` — Plantilla de anexos que deben completar los oferentes
+- `5-ANEXO__LICITACION.docx` — Anexos con datos del oferente
 
 ---
 
